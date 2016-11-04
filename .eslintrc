@@ -1,0 +1,92 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint-config-airbnb-base",
+  "env": {
+    "browser": false,
+    "node": true,
+    "jasmine": false,
+    "es6": true
+  },
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "blockBindings": true,
+    "classes": true,
+    "defaultParams": true,
+    "destructuring": true,
+    "forOf": true,
+    "generators": true,
+    "modules": true,
+    "spread": true,
+    "templateStrings": true,
+    "jsx": true,
+  },
+  "rules": {
+    no-undef: 2,
+    "quotes": [2, "single", "avoid-escape"],
+    "max-len": [2, 200, 4],
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "comma-dangle": [2, "never"], // not sure why airbnb turned this on. gross!
+    "no-underscore-dangle": 0,
+    "no-console": 0,
+    "no-alert": 0,
+    "object-curly-spacing": [2, "never"],
+    "no-shadow": 0,
+    "func-names": 0,
+    "react/display-name": 1,
+    "react/forbid-prop-types": 0,
+    "react/jsx-boolean-value": 1,
+    "react/jsx-closing-bracket-location": 0,
+    "react/jsx-curly-spacing": 1,
+    "react/jsx-handler-names": 1,
+    "react/jsx-indent-props": 1,
+    "react/jsx-key": 1,
+    "react/jsx-max-props-per-line": 1,
+    "react/jsx-no-bind": 0,
+    "react/jsx-no-duplicate-props": 1,
+    "react/jsx-no-literals": 0,
+    "react/jsx-no-undef": 1,
+    "react/jsx-pascal-case": 1,
+    "jsx-quotes": [2, "prefer-single"], // Enforce quote style for JSX attributes
+    "react/jsx-sort-prop-types": 0,
+    "react/jsx-sort-props": 0,
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1,
+    "react/no-danger": 1,
+    "react/no-did-mount-set-state": 0,
+    "react/no-did-update-set-state": 1,
+    "react/no-direct-mutation-state": 1,
+    "react/no-multi-comp": 1,
+    "react/no-set-state": 0,
+    "react/no-unknown-property": 1,
+    "react/prefer-es6-class": 1,
+    "react/prop-types": 1,
+    "react/react-in-jsx-scope": 0, // We include react globally
+    "react/require-extension": 1,
+    "react/self-closing-comp": 1,
+    "react/sort-comp": [
+        1,
+        {
+            "order": [
+                "lifecycle",
+                "render",
+                "everything-else"
+            ]
+        }
+    ],
+    "react/wrap-multilines": 1
+  },
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "React": true,
+    "ReactDOM": true,
+    "$": true,
+    "__DEV__": false,
+    "__PROD__": false,
+    "__CORDOVA__": false,
+    "__DEVTOOLS__": false,
+    "__CLIENT__": false,
+    "__SERVER__": false
+  }
+}
